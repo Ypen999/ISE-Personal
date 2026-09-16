@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version)",
+      "Bash(mvn -version)",
+      "WebSearch",
+      "Bash(mvn -q compile)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(git --version)",
+      "Bash(git config *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)"
+    ]
+  }
+}
