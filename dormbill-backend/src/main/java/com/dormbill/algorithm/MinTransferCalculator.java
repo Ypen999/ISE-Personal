@@ -38,9 +38,10 @@ public class MinTransferCalculator {
     }
     public static void calculateMinTransfers(long[] balances) {
         bestCount = Integer.MAX_VALUE;
+        long[] balancesCopy = Arrays.copyOf(balances, balances.length);
         bestTransfers.clear();
         List<Transfer> currentTransfers = new ArrayList<>();
-        backtracing(balances, 0, currentTransfers);   
+        backtracing(balancesCopy, 0, currentTransfers);   
     }
     private static void backtracing(long[] balance,int start,List<Transfer> currentTransfers){
         while (start < balance.length && balance[start] == 0) {
